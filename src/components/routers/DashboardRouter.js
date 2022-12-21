@@ -14,10 +14,11 @@ export const DashboardRouter = () => {
         <>
             <Navbar />
             <Routes>
-                <Route  path='/marvel' element={<MarverlScreen />} />
-                <Route  path='/heroe/:heroeId' element={<HeroesScreen />} />
-                <Route  path='/dc' element={<DcScreen />} />
-                <Route path='*' element={<DcScreen />}/>
+                <Route path='/' element={<HeroesScreen />} />
+                <Route path='/marvel' element={<MarverlScreen />} />
+                <Route path='/heroe/:heroeId' element={<HeroesScreen />} />
+                <Route path='/dc' element={<DcScreen />} />
+                <Route path='*' element={<h1>404</h1>} /> 
             </Routes>
         </>
     )
