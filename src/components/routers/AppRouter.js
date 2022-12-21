@@ -13,7 +13,7 @@ export const AppRouter = () => {
         <>
             <Routes>
                 <Route exact path='/login' element={<LoginScreen />} />
-                 <Route  path='*' element={<DashboardRouter />} /> 
+                <Route  path='*' element={<DashboardRouter />} /> 
                 {/* <Route path='*' element={<h1>404 alla la ponen en 4</h1>} /> */}
 
 
