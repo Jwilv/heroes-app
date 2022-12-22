@@ -23,6 +23,9 @@ export const HeroesCard = ({
                                 (alter_ego !== characters)
                                 && <p className='card-text'>{ characters }</p>
                             }
+                            <p className='card-text'>
+                                <small className='text-muted'>{ first_appearance }</small>
+                            </p>
                         </div>
                     </div>
                 </div>
