@@ -1,10 +1,11 @@
 import React from 'react'
-import { Navigate, redirect, Route } from 'react-router'
+import { Navigate, redirect, Route, useNavigate } from 'react-router'
 import { Link } from 'react-router-dom'
 
 export const LoginScreen = () => {
+const navigate = useNavigate();
     const handleLogin = () => {
-        
+        navigate('/',{replace: true})
     }
     return (
         <div className='container mt-5'>
@@ -14,7 +15,6 @@ export const LoginScreen = () => {
                 onClick={handleLogin}
             >
                 Login
-                {false ? <Link to={'/'}>pasa</Link> : <Link>no podes pasar</Link>}
             </button>
         </div>
     )
