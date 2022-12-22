@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const HeroesList = () => {
+export const HeroesList = ({publisher}) => {
   return (
-    <div>HeroesList</div>
+    <div>
+
+    </div>
   )
 }
