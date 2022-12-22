@@ -7,6 +7,7 @@ export const HeroesList = ({ publisher }) => {
   const heroes = getHeroesByPublisher(publisher);
   return (
     <div className='card-columns'>
+      <div className='row'>
       {
         heroes.map(hero => (
           <HeroesCard
@@ -15,6 +16,9 @@ export const HeroesList = ({ publisher }) => {
           />
         ))
       }
+
+      </div>
+      
     </div>
   )
 }
