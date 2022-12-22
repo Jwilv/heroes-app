@@ -19,6 +19,10 @@ export const HeroesCard = ({
                         <h5 className='card-title mt-2'>{superhero}</h5>
                         <div className='card-text'>
                             <p>{alter_ego}</p>
+                            {
+                                (alter_ego !== characters)
+                                && <p className='card-text'>{ characters }</p>
+                            }
                         </div>
                     </div>
                 </div>
