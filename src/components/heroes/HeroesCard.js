@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const HeroesCard = ({
     id,
@@ -26,6 +27,9 @@ export const HeroesCard = ({
                             <p className='card-text'>
                                 <small className='text-muted'>{ first_appearance }</small>
                             </p>
+                            <Link to={`./hero/${id}`}>
+                            Ver mas...
+                            </Link>
                         </div>
                     </div>
                 </div>
