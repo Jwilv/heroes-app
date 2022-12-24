@@ -16,7 +16,7 @@ export const DashboardRouter = () => {
             <Navbar />
             <div className='container mt-2'>
                 <Routes>
-                    <Route path='/' element={<HeroesScreen />} />
+                    <Route path='/' element={<MarverlScreen />} />
                     <Route path='/marvel' element={<MarverlScreen />} />
                     <Route path='/hero/:heroId' element={<HeroesScreen />} />
                     <Route path='/dc' element={<DcScreen />} />
