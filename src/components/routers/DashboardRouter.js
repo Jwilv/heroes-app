@@ -7,6 +7,7 @@ import {
 import { MarverlScreen } from '../marvel/MarverlScreen'
 import { HeroesScreen } from '../heroes/HeroesScreen'
 import { DcScreen } from '../dc/DcScreen'
+import { SearchScreen } from '../../search/SearchScreen'
 
 
 export const DashboardRouter = () => {
@@ -19,6 +20,7 @@ export const DashboardRouter = () => {
                     <Route path='/marvel' element={<MarverlScreen />} />
                     <Route path='/hero/:heroId' element={<HeroesScreen />} />
                     <Route path='/dc' element={<DcScreen />} />
+                    <Route path='/search' element={<SearchScreen />} />
                     <Route path='*' element={<h1>404 no page</h1>} />
                 </Routes>
             </div>
