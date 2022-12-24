@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useLocation, useNavigate } from 'react-router';
 import { heroes } from '../components/data/heroes'
 import { HeroesCard } from '../components/heroes/HeroesCard';
 import { useForm } from '../hooks/useForm';
@@ -9,14 +10,21 @@ export const SearchScreen = () => {
 
     const [{ searchText }, handleInputChanGet] = useForm({ searchText: '' })
 
-    const [search, setSearch] = useState('')
+    const location = useLocation();
+    console.log(location)
+
+    // const [search, setSearch] = useState('');
+
+    const navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        if (searchText.trim().length <= 1) return;
+        navigate(`?q=${ searchText }`)
 
-        setSearch(searchText);
+        // if (searchText.trim().length <= 1) return;
+
+        //setSearch(searchText);
     }
 
     return (
