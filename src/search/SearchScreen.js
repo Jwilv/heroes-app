@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import queryString from 'query-string';
 import { useLocation, useNavigate } from 'react-router';
 import { heroes } from '../components/data/heroes'
 import { HeroesCard } from '../components/heroes/HeroesCard';
@@ -8,10 +9,12 @@ export const SearchScreen = () => {
 
     const heroesFiltered = heroes;
 
-    const [{ searchText }, handleInputChanGet] = useForm({ searchText: '' })
-
     const location = useLocation();
-    console.log(location)
+    const { q = '' } = queryString.parse(location.search)
+
+    const [{ searchText }, handleInputChanGet] = useForm({ searchText: q })
+
+
 
     // const [search, setSearch] = useState('');
 
