@@ -1,4 +1,4 @@
-import { heroes } from "../data/heroes";
+import { heroes } from "../../data/heroes";
 
 export const getHeroesByName = (name = '') => {
     if( name === '') return [];

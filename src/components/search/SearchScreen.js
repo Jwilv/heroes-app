@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react'
 import queryString from 'query-string';
 import { useLocation, useNavigate } from 'react-router';
-import { HeroesCard } from '../components/heroes/HeroesCard';
-import { useForm } from '../hooks/useForm';
-import { getHeroesByName } from '../components/selectors/getHeroesByName';
+import { HeroesCard } from '../heroes/HeroesCard';
+import { useForm } from '../../hooks/useForm';
+import { getHeroesByName } from '../selectors/getHeroesByName';
 
 export const SearchScreen = () => {
 

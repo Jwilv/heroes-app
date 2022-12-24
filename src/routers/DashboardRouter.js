@@ -1,13 +1,13 @@
 import React from 'react'
-import { Navbar } from '../ui/NavBar'
+import { Navbar } from '../components/ui/NavBar'
 import {
     Routes,
     Route,
 } from 'react-router-dom'
-import { MarverlScreen } from '../marvel/MarverlScreen'
-import { HeroesScreen } from '../heroes/HeroesScreen'
-import { DcScreen } from '../dc/DcScreen'
-import { SearchScreen } from '../../search/SearchScreen'
+import { MarverlScreen } from '../components/marvel/MarverlScreen'
+import { HeroesScreen } from '../components/heroes/HeroesScreen'
+import { DcScreen } from '../components/dc/DcScreen'
+import { SearchScreen } from '../components/search/SearchScreen'
 
 
 export const DashboardRouter = () => {

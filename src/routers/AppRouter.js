@@ -3,7 +3,7 @@ import {
     Routes,
     Route,
 } from 'react-router-dom'
-import { LoginScreen } from '../login/LoginScreen'
+import { LoginScreen } from '../components/login/LoginScreen'
 import { DashboardRouter } from './DashboardRouter'
 
 
