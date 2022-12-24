@@ -16,7 +16,7 @@ export const SearchScreen = () => {
 
     const [{ searchText }, handleInputChanGet] = useForm({ searchText: q })
 
-    const heroesFiltered = heroes;
+        const heroesFiltered = heroes;
 
     const navigate = useNavigate();
 
