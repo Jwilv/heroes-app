@@ -7,7 +7,7 @@ import { useForm } from '../hooks/useForm';
 
 export const SearchScreen = () => {
 
-    const heroesFiltered = heroes;
+
 
     const location = useLocation();
 
@@ -15,6 +15,8 @@ export const SearchScreen = () => {
     
 
     const [{ searchText }, handleInputChanGet] = useForm({ searchText: q })
+
+    const heroesFiltered = heroes;
 
     const navigate = useNavigate();
 
