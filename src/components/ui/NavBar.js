@@ -4,8 +4,11 @@ import { AuthContext } from '../../auth/AuthContext';
 
 
 export const Navbar = () => {
-
-    const { user } = useContext(AuthContext)
+//esto sirve para desestrcturar una propiedo de un obejeto ( user )
+// y cons :{} al aldo podemos desestructurar la propiedad que queremos del objeto que ya desestructuramos
+// ej const { user:{name} ( aca sacamos la propiedad del objeto que desestructuramos ) } = useContext(AuthContext)
+//es una segunda desestructuracion que se puede hacer dentro de la primera 
+    const { user:{name} } = useContext(AuthContext)
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
             
@@ -44,7 +47,7 @@ export const Navbar = () => {
 
             <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
                 <ul className="navbar-nav ml-auto">
-                    <span className='nav-item nav-link text-info'>{user.name}</span>
+                    <span className='nav-item nav-link text-info'>{name}</span>
                     <NavLink 
                         className="nav-item nav-link" 
                         to="/login"
