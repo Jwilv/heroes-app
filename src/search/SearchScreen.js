@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useMemo } from 'react'
 import queryString from 'query-string';
 import { useLocation, useNavigate } from 'react-router';
 import { heroes } from '../components/data/heroes'
@@ -16,20 +16,12 @@ export const SearchScreen = () => {
 
     const [{ searchText }, handleInputChanGet] = useForm({ searchText: q })
 
-
-
-    // const [search, setSearch] = useState('');
-
     const navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
-
         navigate(`?q=${ searchText }`)
 
-        // if (searchText.trim().length <= 1) return;
-
-        //setSearch(searchText);
     }
 
     return (
