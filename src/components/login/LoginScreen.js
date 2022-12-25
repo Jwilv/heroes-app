@@ -22,12 +22,14 @@ export const LoginScreen = () => {
 
         setValidName(true);
 
-        navigate('/', { replace: true })
-
         dispatch({
             type: types.login,
             payload: { name: userName },
         })
+
+        navigate('/', { replace: true })
+
+
     }
     return (
         <div className='container mt-5'>
@@ -61,12 +63,12 @@ export const LoginScreen = () => {
     )
 }
 
-//(validName === !!validName) validName se niega 2 veces porque su estado inicial es null 
-// la negacion de !null (!validName) es true 
-// la doble negacion de un null lo hace false 
+//(validName === !!validName) validName se niega 2 veces porque su estado inicial es null
+// la negacion de !null (!validName) es true
+// la doble negacion de un null lo hace false
 //por que se niega el true
 //(validName === !!validName) la condicion al inicio no se cumple porque cuando (validName) no tiene nada es null y no salta el aviso
 // el aviso no salta por que es un (null === false)
-// luego de que  se ponga un name con menos caracteres de los necessarios queda 
-//( flase === false ) y ahi se cumple la condicion 
+// luego de que  se ponga un name con menos caracteres de los necessarios queda
+//( flase === false ) y ahi se cumple la condicion
 // y salata el aviso
