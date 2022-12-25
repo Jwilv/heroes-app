@@ -18,10 +18,12 @@ export const AppRouter = () => {
         <>
             <Routes>
                 <Route exact path='/login' element={<LoginScreen />} />
-                <PrivateRouter
-                    path='*'
-                    element={<DashboardRouter />}
-                    isAuthenticated={user.logged} />
+                <Route path='*' element={
+                    <PrivateRouter user={user} >
+                        <DashboardRouter />
+                    </PrivateRouter>
+                }
+                />
             </Routes>
         </>
     )
