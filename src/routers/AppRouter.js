@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {
     Routes,
     Route,
 } from 'react-router-dom'
+import { AuthContext } from '../auth/AuthContext'
 import { LoginScreen } from '../components/login/LoginScreen'
 import { DashboardRouter } from './DashboardRouter'
 import { PrivateRouter } from './PrivateRouter'
@@ -10,11 +11,17 @@ import { PrivateRouter } from './PrivateRouter'
 
 
 export const AppRouter = () => {
+
+    const { user } = useContext(AuthContext)
+
     return (
         <>
             <Routes>
                 <Route exact path='/login' element={<LoginScreen />} />
-                <PrivateRouter  path='*' element={<DashboardRouter />} /> 
+                <PrivateRouter
+                    path='*'
+                    element={<DashboardRouter />}
+                    isAuthenticated={user.logged} />
             </Routes>
         </>
     )
