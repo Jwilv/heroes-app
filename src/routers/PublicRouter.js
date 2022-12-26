@@ -8,7 +8,7 @@ export const PublicRouter = ({ children }) => {
     const { user } = useContext(AuthContext)
     return (!user.logged)
         ? children
-        : <Navigate to={'/marvel'} />
+        : <Navigate to={'/'} />
 }
 
 PublicRouter.propTypes = {
