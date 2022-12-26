@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pruebas en <PrivateRouter /> debe de mostrar el componente si esta autenticado 1`] = `
+<PrivateRouter>
+  <Title />
+</PrivateRouter>
+`;
