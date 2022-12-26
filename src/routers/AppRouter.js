@@ -15,7 +15,6 @@ export const AppRouter = () => {
     const { user } = useContext(AuthContext)
 
     return (
-        <>
             <Routes>
                 <Route path='/login' element={<LoginScreen />} />
                 <Route path='*' element={
@@ -25,6 +24,5 @@ export const AppRouter = () => {
                 }
                 />
             </Routes>
-        </>
     )
 }
