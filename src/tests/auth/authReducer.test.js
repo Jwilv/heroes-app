@@ -16,5 +16,15 @@ describe('pruebas en authReducer', () => {
         });
         expect(state.user).toEqual(demoAuthTodo[0].user);
     })
+
+    test('debe de borrar el user y pasar el logged a false', () => {
+        const state = authReducer( demoAuthTodo[0] , {
+            type: types.logout,
+        });
+        
+        expect(state.logged).toBe(false);
+        expect(state).toEqual({logged:false});
     
+    })
+
 })
