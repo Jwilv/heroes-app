@@ -11,6 +11,6 @@ export const PublicRouter = ({ children }) => {
         : <Navigate to={'/marvel'} />
 }
 
-PrivateRouter.propTypes = {
+PublicRouter.propTypes = {
     children: PropTypes.element.isRequired,
 }
