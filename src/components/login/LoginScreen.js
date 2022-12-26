@@ -18,6 +18,8 @@ export const LoginScreen = () => {
 
         event.preventDefault();
 
+        const lastPath = localStorage.getItem('lastPath') || '/'
+
         if (userName.trim().length <= 3) return setValidName(false);
 
         setValidName(true);
@@ -27,7 +29,7 @@ export const LoginScreen = () => {
             payload: { name: userName },
         })
 
-        navigate('/', { replace: true })
+        navigate(lastPath, { replace: true })
 
 
     }
